@@ -1,0 +1,30 @@
+<h1>Edit Comment</h1>
+
+<p>
+  <strong>Old Commenter:</strong>
+  <%= @comment.commenter %>
+</p>
+
+<p>
+  <strong>Old Comment:</strong>
+  <%= @comment.body %>
+</p>
+
+<%= form_with model: [@comment.article, @comment], local: true do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', article_path(@comment.article) %>
+
+
+
