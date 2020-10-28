@@ -15,19 +15,31 @@ body {
   font-family: $newspaper-font;
 }
 
+span {
+  font-family: $newspaper-font;
+}
+
 h1 {
   text-align: center;
   font-family: $newspaper-font;
   margin-bottom: 5px;
 }
 
-section, .new-article-container {
-  display: grid;
-  grid-template-columns: $grid-template;
-  justify-items: center;
+.article-header {
+  padding-bottom: 10px;
 }
 
 .article-header {
-  padding-top: 20px;
-  font-weight: bold;
+  .row {
+    span {
+      font-weight: bold;
+      margin: 20px 0;
+    }
+  }
+}
+
+.article-content {
+  .row {
+    padding-bottom: 5px;
+  }
 }

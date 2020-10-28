@@ -1,25 +1,31 @@
 <h1>Jornal Digital</h1>
 
-<div class="new-article-container">
-  <%= link_to 'Novo Artigo', new_article_path, class: "new-article-button" %>
+<div class="d-flex justify-content-center">
+  <span>
+    <%= link_to 'Novo Artigo', new_article_path, class: "btn btn-success" %>
+  </span>
 </div>
 
-<section class="article-header">
-  <span>Título</span>
-  <span>Texto</span>
-  <span>Ações</span>
+<section class="container article-header">
+  <div class="row">
+    <span class="col text-center">Título</span>
+    <span class="col-6 text-center">Texto</span>
+    <span class="col text-center">Ações</span>
+  </div>
 </section>
 
-<section class="article-content">
+<section class="container article-content">
   <% @articles.each do |article| %>
-    <span><%= article.title %></span>
-    <span><%= article.text %></span>
-    <div class="action-buttons">
-      <span><%= link_to 'Ver', article_path(article) %></span>
-      <span><%= link_to 'Editar', edit_article_path(article) %></span>
-      <span><%= link_to 'Deletar', article_path(article),
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %></span>
+    <div class="row">
+      <span class="col text-center"><%= article.title %></span>
+      <span class="col-6 text-center"><%= article.text %></span>
+      <div class="col">
+        <span><%= link_to 'Ver', article_path(article), class: "btn btn-primary" %></span>
+        <span><%= link_to 'Editar', edit_article_path(article), class: "btn btn-secondary" %></span>
+        <span><%= link_to 'Deletar', article_path(article), class: "btn btn-danger",
+                 method: :delete,
+                 data: { confirm: 'Tem certeza que quer deletar?' } %></span>
+      </div>
     </div>
   <% end %>
 </section>
