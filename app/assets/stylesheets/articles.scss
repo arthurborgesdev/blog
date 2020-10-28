@@ -8,6 +8,7 @@
 }
 
 $newspaper-font: 'OldNewspaperTypes';
+$grid-template: 1fr 3fr 1fr;
 
 body {
   background-color: #F5F5E5;
@@ -17,4 +18,16 @@ body {
 h1 {
   text-align: center;
   font-family: $newspaper-font;
+  margin-bottom: 5px;
+}
+
+section, .new-article-container {
+  display: grid;
+  grid-template-columns: $grid-template;
+  justify-items: center;
+}
+
+.article-header {
+  padding-top: 20px;
+  font-weight: bold;
 }
