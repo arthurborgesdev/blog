@@ -15,5 +15,5 @@
 <h2>Comentar:</h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Editar', edit_article_path(@article) %> | 
-<%= link_to 'Voltar', articles_path %>
+<%= link_to 'Editar', edit_article_path(@article), class: "btn btn-secondary" %>
+<%= link_to 'Voltar', articles_path, class: "btn btn-primary" %>

@@ -1,13 +1,13 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   <p>
-    <%= form.label :commenter %><br>
+    <%= form.label :commenter, 'Autor' %><br>
     <%= form.text_field :commenter %>
   </p>
   <p>
-    <%= form.label :body %><br>
+    <%= form.label :body, 'Comentário' %><br>
     <%= form.text_area :body %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit :Salvar, class: "btn btn-success" %>
   </p>
 <% end %>

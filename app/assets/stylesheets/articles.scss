@@ -2,13 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
+/* Font Face */
 @font-face {
   font-family: 'OldNewspaperTypes';
   src: font-url('OldNewspaperTypes.ttf')
 }
 
+/* Variables */
 $newspaper-font: 'OldNewspaperTypes';
 $grid-template: 1fr 3fr 1fr;
+
 
 body {
   background-color: #F5F5E5;
