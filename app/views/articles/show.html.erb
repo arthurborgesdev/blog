@@ -1,19 +1,27 @@
-<p>
-  <strong>Título:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Texto:</strong>
-  <%= @article.text %>
-</p>
-
-<h2>Comentários</h2>
-
-<%= render @article.comments %>
-
-<h2>Comentar:</h2>
-<%= render 'comments/form' %>
-
-<%= link_to 'Editar', edit_article_path(@article), class: "btn btn-secondary" %>
-<%= link_to 'Voltar', articles_path, class: "btn btn-primary" %>
+<section class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+      <p>
+        <strong>Título:</strong>
+        <%= @article.title %>
+      </p>
+      
+      <p>
+        <strong>Texto:</strong>
+        <%= @article.text %>
+      </p>
+      
+      <h2>Comentários</h2>
+      
+      <%= render @article.comments %>
+      
+      <h2>Comentar:</h2>
+      <%= render 'comments/form' %>
+      
+      <%= link_to 'Editar', edit_article_path(@article), class: "btn btn-secondary" %>
+      <%= link_to 'Voltar', articles_path, class: "btn btn-primary" %>
+    </div>
+    <div class="col"></div>
+  </div>
+</section>

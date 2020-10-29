@@ -11,9 +11,8 @@
 
 /* Variables */
 $newspaper-font: 'OldNewspaperTypes';
-$grid-template: 1fr 3fr 1fr;
 
-
+/* General */
 body {
   background-color: #F5F5E5;
   font-family: $newspaper-font;
@@ -23,6 +22,7 @@ span {
   font-family: $newspaper-font;
 }
 
+/* Article Styles */
 h1 {
   text-align: center;
   font-family: $newspaper-font;
@@ -47,3 +47,5 @@ h1 {
     padding-bottom: 5px;
   }
 }
+
+/* Comments Styles */
