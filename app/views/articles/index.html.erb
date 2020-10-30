@@ -17,9 +17,9 @@
 <section class="container article-content">
   <% @articles.each do |article| %>
     <div class="row">
-      <span class="col text-center"><%= article.title %></span>
-      <span class="col-6 text-center"><%= article.text %></span>
-      <div class="col">
+      <span class="col text-center border-bottom"><%= article.title %></span>
+      <span class="col-6 text-center border-right border-left border-bottom"><%= article.text %></span>
+      <div class="col border-bottom">
         <span><%= link_to 'Ver', article_path(article), class: "btn btn-primary" %></span>
         <span><%= link_to 'Editar', edit_article_path(article), class: "btn btn-secondary" %></span>
         <span><%= link_to 'Deletar', article_path(article), class: "btn btn-danger",
