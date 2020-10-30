@@ -1,13 +1,15 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   <p>
     <%= form.label :commenter, 'Autor' %><br>
-    <%= form.text_field :commenter %>
+    <%= form.text_field :commenter, class: "comment-text-field" %>
   </p>
   <p>
     <%= form.label :body, 'Comentário' %><br>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class: "comment-text-area" %>
   </p>
   <p>
     <%= form.submit :Salvar, class: "btn btn-success" %>
+    <%= link_to 'Editar', edit_article_path(@article), class: "btn btn-secondary" %>
+    <%= link_to 'Voltar', articles_path, class: "btn btn-primary" %>
   </p>
 <% end %>

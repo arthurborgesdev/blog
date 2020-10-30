@@ -1,32 +1,41 @@
-<%= form_with model: @article, local: true do |form| %>
-
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %>
-      prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+<section class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-6">
+      <%= form_with model: @article, local: true do |form| %>
+        <% if @article.errors.any? %>
+          <div id="error_explanation">
+            <h2>
+              <%= pluralize(@article.errors.count, "error") %>
+            prohibited
+              this article from being saved:
+            </h2>
+            <ul>
+              <% @article.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-
-<% end %>
+      
+        <p>
+          <%= form.label :title, 'Título' %><br>
+          <%= form.text_field :title, class: "article-text-field" %>
+        </p>
+      
+        <p>
+          <%= form.label :text, 'Texto' %><br>
+          <%= form.text_area :text, class: "article-text-area" %>
+        </p>
+      
+        <span>
+          <%= form.submit :Salvar, class: "btn btn-success" %>
+        </span>
+        <span>
+          <%= link_to 'Voltar', articles_path, class: "btn btn-primary" %>
+        </span>
+      <% end %>
+    </div> 
+    <div class="col"></div>
+  </div>
+</section>

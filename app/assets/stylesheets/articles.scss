@@ -48,4 +48,20 @@ h1 {
   }
 }
 
+.article-text-field, .article-text-area {
+  width: 100%;
+}
+
+.article-text-area {
+  height: 200px;
+}
+
 /* Comments Styles */
+
+.comment-text-field, .comment-text-area {
+  width: 100%;
+}
+
+.comment-text-area {
+  height: 200px;
+}
